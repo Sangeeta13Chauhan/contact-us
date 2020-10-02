@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: "blue";
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: "purple";
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #f1f1f1;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick = "closeNav()">×</a>
+  <a href="#" style="color:Tomato;">Home</a>
+  <a href="#" style="color:rgb(71, 255, 86);"> >About Us</a>
+  <a href="#" style="color:rgb(255, 71, 200);"> >Donor</a>
+  <a href="#" style="color:rgb(252, 255, 71);"> >Members</a>
+  <a href="#" style="color:rgb(71, 218, 255);"> >Volunteers</a>
+  <a href="#" style="color:rgb(238, 54, 22);"> >Seniors</a>
+  <a href="#" style="color:rgb(255, 71, 71);"> >Contact</a>
+  <a href="#" style="color:rgb(77, 255, 71);"> >Themes</a>
+  <a href="#" style="color:DodgerBlue;">Games</a>
+  <a href="#" style="color:MediumSeaGreen;">Points Table</a>
+  
+</div>
+
+<div id="main">
+  <button class="openbtn" onClick="openNav()">☰ </button>
+  </div>
+ <br/>
+ <script >
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</head>
+</body>
+</html> 
